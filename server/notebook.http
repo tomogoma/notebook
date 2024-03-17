@@ -1,0 +1,45 @@
+### get all messages
+GET http://localhost:8082/messages
+Accept: application/json
+
+### insert invalid message, invalid date
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "dateSent": "invalid",
+  "type": "CSV_LINE",
+  "sender": "0712345678",
+  "receiver": "0723456789",
+  "content": "Test 1 with everything"
+}
+
+### insert valid message
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "dateSent": "2024-01-05",
+  "type": "CSV_LINE",
+  "sender": "0712345678",
+  "receiver": "0723456789",
+  "content": "Test 1 with everything"
+}
+
+### insert valid message
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "dateSent": "2024-01-06",
+  "type": "SMS",
+  "sender": "0734567890",
+  "receiver": "0745678901",
+  "content": "Test 2 with everything"
+}
+
+### get all messages
+GET http://localhost:8082/messages
+Accept: application/json
+
+

@@ -1,0 +1,6 @@
+/.idea/
+/server/.gradle/
+/server/bin/
+/server/gradle/wrapper/gradle-wrapper.jar
+/server/src/main/generated/
+/server/build/
