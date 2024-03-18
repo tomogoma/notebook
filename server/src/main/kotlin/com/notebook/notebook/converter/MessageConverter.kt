@@ -1,6 +1,6 @@
 package com.notebook.notebook.converter
 
-import com.notebook.notebook.controller.MessageDTO
+import com.notebook.notebook.controller.MessageDto
 import com.notebook.notebook.controller.NewMessageDto
 import com.notebook.notebook.entity.Message
 import org.springframework.stereotype.Service
@@ -13,24 +13,24 @@ import org.springframework.stereotype.Service
 class MessageConverter {
     fun newMessageDtoToMessage(nmDTO: NewMessageDto): Message {
         return Message(
-                nmDTO.dateSent,
-                nmDTO.type,
-                nmDTO.sender,
-                nmDTO.receiver,
-                nmDTO.content
+            nmDTO.dateSent,
+            nmDTO.type,
+            nmDTO.sender,
+            nmDTO.receiver,
+            nmDTO.content
         )
     }
 
-    fun messageToMessageDTO(msg: Message): MessageDTO {
-        return MessageDTO(
-                msg.id!!,
-                msg.createdAt,
-                msg.updatedAt,
-                msg.dateSent,
-                msg.type,
-                msg.sender,
-                msg.receiver,
-                msg.content
+    fun messageToMessageDto(msg: Message): MessageDto {
+        return MessageDto(
+            msg.id!!,
+            msg.createdAt,
+            msg.updatedAt,
+            msg.dateSent,
+            msg.type,
+            msg.sender,
+            msg.receiver,
+            msg.content
         )
     }
 }
