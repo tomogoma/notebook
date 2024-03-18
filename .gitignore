@@ -4,3 +4,4 @@
 /server/gradle/wrapper/gradle-wrapper.jar
 /server/src/main/generated/
 /server/build/
+/server/src/main/resources/application-*.properties

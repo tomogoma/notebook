@@ -26,7 +26,7 @@ Content-Type: application/json
   "content": "Test 2 with everything"
 }
 
-### insert valid messages
+### bulk insert valid messages
 POST http://localhost:8082/messages/bulk
 Content-Type: application/json
 
