@@ -14,21 +14,23 @@ import java.util.*
 @Data
 data class Message(
 
-        val dateSent: Date = Date(),
+    val dateSent: Date = Date(),
 
-        val type: MessageType = MessageType.SMS,
+    val type: MessageType = MessageType.SMS,
 
-        val sender: String = "",
+    val sender: String = "",
 
-        val receiver: String = "",
+    val receiver: String = "",
 
-        val content: String = "",
+    val content: String = "",
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        val id: Long? = null,
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    val id: Long? = null,
 
-        val createdAt: Date = Date(),
+    val createdAt: Date = Date(),
 
-        val updatedAt: Date = Date()
+    val updatedAt: Date = Date(),
+
+    val deletedAt: Date? = null
 )

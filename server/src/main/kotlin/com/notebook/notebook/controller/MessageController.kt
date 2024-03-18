@@ -3,10 +3,13 @@ package com.notebook.notebook.controller
 import com.notebook.notebook.converter.MessageConverter
 import com.notebook.notebook.service.MessageService
 import jakarta.validation.Valid
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.data.domain.Pageable
+import org.springframework.data.web.PagedResourcesAssembler
+import org.springframework.format.annotation.DateTimeFormat
+import org.springframework.hateoas.EntityModel
+import org.springframework.hateoas.PagedModel
+import org.springframework.web.bind.annotation.*
+import java.util.*
 
 
 @RestController
@@ -34,8 +37,13 @@ class MessageController(
     }
 
     @GetMapping("/messages")
-    fun getMessages(): List<MessageDto> {
-        val msgs = messageService.fetchMessages()
-        return msgs.map { messageConverter.messageToMessageDto(it) }
+    fun getMessages(
+        @RequestParam("delta") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) delta: Date?,
+        page: Pageable,
+        assembler: PagedResourcesAssembler<MessageDto>
+    ): PagedModel<EntityModel<MessageDto>> {
+        val msgs = messageService.fetchMessages(delta, page)
+        val msgDtos = msgs.map { messageConverter.messageToMessageDto(it) }
+        return assembler.toModel(msgDtos)
     }
 }
