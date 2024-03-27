@@ -1,6 +1,8 @@
 package com.notebook.notebook.controller
 
 import com.notebook.notebook.converter.MessageConverter
+import com.notebook.notebook.dto.MessageDto
+import com.notebook.notebook.dto.NewMessageDto
 import com.notebook.notebook.service.MessageService
 import jakarta.validation.Valid
 import org.springframework.data.domain.Pageable

@@ -1,7 +1,7 @@
 package com.notebook.notebook.converter
 
-import com.notebook.notebook.controller.MessageDto
-import com.notebook.notebook.controller.NewMessageDto
+import com.notebook.notebook.dto.MessageDto
+import com.notebook.notebook.dto.NewMessageDto
 import com.notebook.notebook.entity.Message
 import org.springframework.stereotype.Service
 

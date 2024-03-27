@@ -1,4 +1,4 @@
-package com.notebook.notebook.controller
+package com.notebook.notebook.dto
 
 import com.notebook.notebook.common.MessageType
 import jakarta.validation.constraints.NotEmpty

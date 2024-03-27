@@ -1,5 +1,6 @@
 package com.notebook.notebook.controller
 
+import com.notebook.notebook.dto.ErrorDto
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.MethodArgumentNotValidException
