@@ -44,6 +44,7 @@ class User(
     @Column(name = "password", nullable = false)
     private val password = passwordArg
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
+        // TODO add RBAC
         return mutableListOf()
     }
 

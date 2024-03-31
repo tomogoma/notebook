@@ -1,4 +1,4 @@
-package com.notebook.notebook.controller
+package com.notebook.notebook.exception
 
 import com.notebook.notebook.dto.ErrorDto
 import org.springframework.http.HttpStatus

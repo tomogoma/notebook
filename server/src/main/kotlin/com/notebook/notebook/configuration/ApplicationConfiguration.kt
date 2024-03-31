@@ -16,6 +16,9 @@ class ApplicationConfiguration(private val userRepository: UserRepository) {
     @Bean
     fun userDetailsService(): UserDetailsService {
         return UserDetailsService { username: String ->
+            // TODO cache user details:
+            //    user update should refresh cache
+            //    because deleted_at, locked_at, disabled_at, password_updated_at should be instantaneous
             userRepository.findByUsername(username)
         }
     }

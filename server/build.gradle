@@ -46,7 +46,7 @@ dependencies {
     compileOnly 'org.mapstruct:mapstruct-processor:1.4.2.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
 
-    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+    runtimeOnly 'com.mysql:mysql-connector-j'
     runtimeOnly 'com.h2database:h2'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
